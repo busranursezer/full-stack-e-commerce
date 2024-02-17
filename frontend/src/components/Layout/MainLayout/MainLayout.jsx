@@ -1,17 +1,22 @@
-import React from "react";
-import Footer from "../components/Layout/Footer/Footer";
-import Header from "../components/Layout/Header/Header";
+
+import Footer from "../../../components/Layout/Footer/Footer";
+import Header from "../../../components/Layout/Header/Header";
 import Proptypes from "prop-types";
+import { useState } from "react";
+import Search from "../../Modals/Search/Search";
 
 const MainLayout = ({ children }) => {
-  return (
-    <React.Fragment>
-      <Header />
-      {children}
-      <Footer />
-    </React.Fragment>
-  );
-};
+    const [isSearchShow, setIsSearchShow] = useState(false);
+  
+    return (
+      <div className="main-layout">
+        <Search isSearchShow={isSearchShow} setIsSearchShow={setIsSearchShow} />
+        <Header setIsSearchShow={setIsSearchShow} />
+        {children}
+        <Footer />
+      </div>
+    );
+  };
 
 export default MainLayout;
 
