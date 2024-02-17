@@ -1,18 +1,32 @@
 import "./App.css";
-import Footer from "./components/Layout/Footer/Footer";
-import Header from "./components/Layout/Header/Header";
-import Policy from "./components/Layout/Policy/Policy";
-import Slider from "./components/Layout/Slider/Sliders";
+
+import React from "react";
+import "./App.css";
+// import CartPage from "./pages/CartPage";
+// import HomePage from "./pages/HomePage";
+// import ShopPage from "./pages/ShopPage";
+// import AuthPage from "./pages/AuthPage";
+// import BlogPage from "./pages/BlogPage";
+// import ContactPage from "./pages/ContactPage";
+// import ProductDetailsPage from "./pages/ProductDetailsPage";
+import BlogDetailsPage from "./pages/BlogDetailsPage";
+
+
+
 
 function App() {
   return (
-    <>
-      <Header />
-      <Slider />
-      <Policy />
-      <Footer />
-    </>
+    <React.Fragment>
+      {/* <HomePage /> */}
+      {/* <ShopPage /> */}
+      {/* <ContactPage /> */}
+      {/* <AuthPage /> */}
+      {/* <CartPage /> */}
+      {/* <BlogPage /> */}
+      <BlogDetailsPage />
+      {/* <ProductDetailsPage /> */}
+     
+    </React.Fragment>
   );
 }
-
 export default App;
